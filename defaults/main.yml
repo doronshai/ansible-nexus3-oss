@@ -1,4 +1,7 @@
 ---
+nexus_installation_is_docker: 'yes'
+nexus_docker: "clearent/nexus"
+
 nexus_version: '3.2.1-01'
 nexus_package: "nexus-{{ nexus_version }}-unix.tar.gz"
 nexus_download_dir: '/tmp'

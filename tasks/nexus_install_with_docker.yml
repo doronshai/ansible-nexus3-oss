@@ -1,0 +1,41 @@
+---
+- name: Create folder for nexus-data
+  file: path="{{ item }}" state=directory
+  with_items:
+    - "{{ nexus_data_dir }}"
+    - "{{ nexus_tmp_dir }}"
+
+- name: Run nexus container
+  docker_container:
+     name: nexus3
+     image: "{{ nexus_docker }}:{{ nexus_version }}"
+     ports:
+      - 8081:8081
+     env:
+      NEXUS_CONTEXT: nexus
+     volumes:
+       - "{{ nexus_data_dir }}:/nexus-data"
+      #  - "{{ nexus_tmp_dir }}:{{ nexus_tmp_dir }}"
+
+- name: 'Check if data directory is empty (first-time install)'
+  command: "ls {{ nexus_data_dir }}"
+  register: nexus_data_dir_contents
+
+# TODO
+# - name: Setup Nexus default timezone
+#   lineinfile:
+#     dest: "{{ nexus_installation_dir }}/nexus-latest/bin/nexus.vmoptions"
+#     regexp: "^-Duser.timezone=.*"
+#     line: "-Duser.timezone={{ nexus_timezone }}"
+#
+
+- name: Waiting for Nexus service to be ready...
+  wait_for:
+    path: "{{ nexus_data_dir }}/log/nexus.log"
+    search_regex: "Started Sonatype Nexus OSS .*"
+    timeout: 1800
+
+- name: Waiting for nexus to be ready...
+  wait_for: port={{ nexus_default_port }} delay=5
+
+- include: nexus_install_repos.yml

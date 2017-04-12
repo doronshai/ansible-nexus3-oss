@@ -1,5 +1,9 @@
 ---
 - include: nexus_install.yml
+  when: nexus_installation_is_docker == "no"
+
+- include: nexus_install_with_docker.yml
+  when: nexus_installation_is_docker == "yes"
 
 - include: httpd_reverse_proxy_config.yml
   when: httpd_setup_enable
