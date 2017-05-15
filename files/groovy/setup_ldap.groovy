@@ -43,6 +43,7 @@ mapping.setUserPasswordAttribute(parsed_args.user_password_attribute)
 mapping.setUserRealNameAttribute(parsed_args.user_real_name_attribute)
 mapping.setEmailAddressAttribute(parsed_args.user_email_attribute)
 mapping.setUserSubtree(parsed_args.set_user_subtree)
+mapping.setLdapFilter(parsed_args.set_ldap_filter)
 
 mapping.setLdapGroupsAsRoles(true)
 mapping.setGroupBaseDn(parsed_args.group_base_dn)

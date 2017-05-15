@@ -22,3 +22,4 @@
       auth_method: "{{ item.ldap_auth_method }}"
       set_user_subtree: "{{ item.ldap_set_user_subtree }}"
       ldap_auth_method: 'none'
+      set_ldap_filter: "{{ item.ldap_set_ldap_filter }}"

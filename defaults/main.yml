@@ -44,6 +44,7 @@ ldap_connections:
 #    ldap_group_member_attribute: 'memberUid'
 #    ldap_group_member_format: '${username}'
 #    ldap_set_user_subtree: 'true'
+#    ldap_set_ldap_filter: ''
     ldap_auth_method: 'none'
 
 nexus_config_pypi: false
