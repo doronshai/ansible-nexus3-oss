@@ -45,6 +45,9 @@ ldap_connections:
 #    ldap_group_member_format: '${username}'
 #    ldap_set_user_subtree: 'true'
 #    ldap_set_ldap_filter: ''
+#    ldap_system_username: ''
+#    ldap_system_password: ''
+#    ldap_group_subtree: 'false'
     ldap_auth_method: 'none'
 
 nexus_config_pypi: false

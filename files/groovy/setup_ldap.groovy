@@ -31,6 +31,8 @@ connection.setSearchBase(parsed_args.search_base)
 connection.setConnectionTimeout(30)
 connection.setConnectionRetryDelay(300)
 connection.setMaxIncidentsCount(3)
+connection.systemUsername(parsed_args.system_username)
+connection.systemPassword(parsed_args.system_password)
 ldapConfig.setConnection(connection)
 
 
@@ -51,6 +53,7 @@ mapping.setGroupObjectClass(parsed_args.group_object_class)
 mapping.setGroupIdAttribute(parsed_args.group_id_attribute)
 mapping.setGroupMemberAttribute(parsed_args.group_member_attribute)
 mapping.setGroupMemberFormat(parsed_args.group_member_format)
+mapping.groupSubtree(parsed_args.group_subtree)
 
 ldapConfig.setMapping(mapping)
 
