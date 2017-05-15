@@ -19,3 +19,4 @@
       group_id_attribute: "{{ item.ldap_group_id_attribute }}"
       group_member_attribute: "{{ item.ldap_group_member_attribute }}"
       group_member_format: "{{ item.ldap_group_member_format }}"
+      auth_method: "{{ item.ldap_auth_method }}"
