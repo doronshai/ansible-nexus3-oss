@@ -25,7 +25,7 @@ httpd_setup_enable: false
 httpd_ssl_certificate_file: 'files/nexus.vm.crt'
 httpd_ssl_certificate_key_file: 'files/nexus.vm.key'
 
-ldap_connections: []
+ldap_connections:
 # example ldap config :
   - ldap_name: 'My Company LDAP' # used as a key to update the ldap config
 #    ldap_protocol: 'ldaps' # ldap or ldaps
