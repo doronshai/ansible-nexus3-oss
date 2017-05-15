@@ -35,6 +35,7 @@ ldap_connections: []
 #    ldap_user_base_dn: 'ou=users'
 #    ldap_user_object_class: 'inetOrgPerson'
 #    ldap_user_id_attribute: 'uid'
+#    ldap_user_password_attribute 'password'
 #    ldap_user_real_name_attribute: 'cn'
 #    ldap_user_email_attribute: 'mail'
 #    ldap_group_base_dn: 'ou=groups'

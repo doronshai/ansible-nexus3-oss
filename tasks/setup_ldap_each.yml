@@ -11,6 +11,7 @@
       user_base_dn: "{{ item.ldap_user_base_dn }}"
       user_object_class: "{{ item.ldap_user_object_class }}"
       user_id_attribute: "{{ item.ldap_user_id_attribute }}"
+      user_password_attribute: "{{ item.ldap_user_password_attribute }}"
       user_real_name_attribute: "{{ item.ldap_user_real_name_attribute }}"
       user_email_attribute: "{{ item.ldap_user_email_attribute }}"
       group_base_dn: "{{ item.ldap_group_base_dn }}"
