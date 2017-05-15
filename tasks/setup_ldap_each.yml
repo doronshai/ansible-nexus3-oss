@@ -20,3 +20,5 @@
       group_member_attribute: "{{ item.ldap_group_member_attribute }}"
       group_member_format: "{{ item.ldap_group_member_format }}"
       auth_method: "{{ item.ldap_auth_method }}"
+      set_user_subtree: "{{ item.ldap_set_user_subtree }}"
+      ldap_auth_method: 'none'
