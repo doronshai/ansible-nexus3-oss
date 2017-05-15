@@ -57,7 +57,7 @@
 
   - include: create_repo_docker_group_each.yml
     with_items: "{{ nexus_repos_docker_group }}"
-  when: nexus_config_docker
+  when: nexus_config_docker == "true"
 
 - block:
   - include: create_repo_pypi_proxy_each.yml
@@ -68,7 +68,7 @@
 
   - include: create_repo_pypi_group_each.yml
     with_items: "{{ nexus_repos_pypi_group }}"
-  when: nexus_config_pypi
+  when: nexus_config_pypi == "true"
 
 - block:
   - include: create_repo_raw_proxy_each.yml
@@ -79,7 +79,7 @@
 
   - include: create_repo_raw_group_each.yml
     with_items: "{{ nexus_repos_raw_group }}"
-  when: nexus_config_raw
+  when: nexus_config_raw == "true"
 
 - block:
   - include: create_repo_rubygems_proxy_each.yml
@@ -90,7 +90,7 @@
 
   - include: create_repo_rubygems_group_each.yml
     with_items: "{{ nexus_repos_rubygems_group }}"
-  when: nexus_config_rubygems
+  when: nexus_config_rubygems == "true"
 
 - block:
   - include: create_repo_bower_proxy_each.yml
@@ -101,7 +101,7 @@
 
   - include: create_repo_bower_group_each.yml
     with_items: "{{ nexus_repos_bower_group }}"
-  when: nexus_config_bower
+  when: nexus_config_bower == "true"
 
 - block:
   - include: create_repo_npm_proxy_each.yml
@@ -112,7 +112,7 @@
 
   - include: create_repo_npm_group_each.yml
     with_items: "{{ nexus_repos_npm_group }}"
-  when: nexus_config_npm
+  when: nexus_config_npm == "true"
 
 - include: call_script.yml
   vars:
