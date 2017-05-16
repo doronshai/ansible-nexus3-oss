@@ -48,7 +48,7 @@ ldap_connections:
 #    ldap_system_username: ''
 #    ldap_system_password: ''
 #    ldap_group_subtree: 'false'
-    ldap_auth_method: 'none'
+#    ldap_auth_method: 'none'
 
 nexus_config_pypi: false
 nexus_config_docker: false
