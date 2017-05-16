@@ -31,8 +31,8 @@ connection.setSearchBase(parsed_args.search_base)
 connection.setConnectionTimeout(30)
 connection.setConnectionRetryDelay(300)
 connection.setMaxIncidentsCount(3)
-connection.systemUsername(parsed_args.system_username)
-connection.systemPassword(parsed_args.system_password)
+connection.setSystemUsername(parsed_args.system_username)
+connection.setSystemPassword(parsed_args.system_password)
 ldapConfig.setConnection(connection)
 
 
