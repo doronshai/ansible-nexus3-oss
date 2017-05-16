@@ -25,4 +25,5 @@
       system_username: "{{ item.ldap_system_username }}"
       system_password: "{{ item.ldap_system_password }}"
       group_subtree: "{{ item.ldap_group_subtree }}"
-      
+  tags:
+    TEST    
