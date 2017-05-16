@@ -23,6 +23,6 @@
       set_user_subtree: "{{ item.ldap_set_user_subtree }}"
       ldap_auth_method: 'none'
       set_ldap_filter: "{{ item.ldap_set_ldap_filter }}"
-      system_username: "{{ item.system_username }}"
-      system_password: "{{ item.system_password }}"
+      system_username: "{{ item.ldap_system_username }}"
+      system_password: "{{ item.ldap_system_password }}"
       group_subtree: "{{ item.ldap_group_subtree }}"
